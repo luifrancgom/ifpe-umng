@@ -18,6 +18,7 @@ format:
     embed-resources: true
     reference-location: document
     mermaid-format: png
+    output-file: index.html
 date: last-modified
 date-format: "D MMMM, YYYY"
 knitr: 
