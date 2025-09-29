@@ -1,0 +1,100 @@
+---
+title: Conflito e negociação
+subtitle: Comportamento Organizacional
+author:
+  - name: 
+      given: Luis F.
+      family: Gómez L.
+    orcid: 0000-0002-2877-9015
+    email: luis.gomezl@unimilitar.edu.co
+    affiliations:
+      - name: Faculdade de Educação a Distância
+toc: true
+toc-depth: 1
+slide-level: 2
+format:
+  presentation-umng-revealjs:
+    logo-vertical-strip: 000_logos/logo-white-vertical.png 
+    embed-resources: true
+    reference-location: document
+    mermaid-format: png
+date: last-modified
+date-format: "D MMMM, YYYY"
+knitr: 
+  opts_chunk: 
+    echo: false
+    warning: false
+    fig.align: center
+    out.width: 85%
+lang: pt
+bibliography: ifpe-umng.bib
+csl: apa.csl
+editor: source
+---
+
+# O que fazem os administradores?
+
+## 
+
+```{mermaid}
+%%| label: fig-management-functions
+%%| fig-cap: Funções dos administradores [@robbins_organizational_2024, p. 40]
+%%| fig-height: 5
+
+flowchart TB
+    A("`Funções`")  --> A1("`Planejamento`") --> A11("`Setting goals 
+    and deciding 
+    how to achieve 
+    them`")
+    A --> A2("`Organizar`") --> A21("`Arranging tasks, 
+    people and 
+    other resources 
+    to accomplish 
+    the work`")
+    A --> A3("`Direção`") --> A31("`Motivating, 
+    directing and 
+    influencing 
+    people to 
+    achieve the 
+    organization’s
+    goals`")
+    A --> A4("`Controle`") --> A41("`Monitoring 
+    performance, 
+    comparing it 
+    with goals and 
+    taking corrective 
+    action as needed`")
+
+    classDef UmngNode fill:#fdc600,stroke:#043074,stroke-width:2px;
+    class A,A1,A11,A2,A21,A3,A31,A4,A41 UmngNode;
+```
+
+## 
+
+```{mermaid}
+%%| label: fig-manager-roles
+%%| fig-cap: Papéis dos administradores segundo Mintzberg [@robbins_organizational_2024, pp. 41-42]
+%%| fig-height: 5
+
+flowchart TB
+    A("`Papéis`") --> A1(Informacionais)
+    A1 --> A11("`Monitor
+    Líder
+    Porta-voz`")
+    A --> A2(Interpessoais)
+    A2 --> A21("`Símbolo
+    Líder
+    Ligação`")
+    A --> A3(Decisórios)
+    A3 --> A31("`Empreendedor
+    **Solucionador de conflitos**
+    Alocador de recursos
+    **Negociador**`")
+
+    classDef UmngNode fill:#fdc600,stroke:#043074,stroke-width:2px;
+    class A,A1,A11,A2,A21,A3,A31,A4,A41 UmngNode;
+```
+
+
+
+# Referências {.allowbreaks}
