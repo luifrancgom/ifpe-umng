@@ -43,28 +43,10 @@ editor: source
 %%| fig-height: 5
 
 flowchart TB
-    A("`Funções`")  --> A1("`Planejamento`") --> A11("`Setting goals 
-    and deciding 
-    how to achieve 
-    them`")
-    A --> A2("`Organizar`") --> A21("`Arranging tasks, 
-    people and 
-    other resources 
-    to accomplish 
-    the work`")
-    A --> A3("`Direção`") --> A31("`Motivating, 
-    directing and 
-    influencing 
-    people to 
-    achieve the 
-    organization’s
-    goals`")
-    A --> A4("`Controle`") --> A41("`Monitoring 
-    performance, 
-    comparing it 
-    with goals and 
-    taking corrective 
-    action as needed`")
+    A("`Funções`")  --> A1("`Planejar`") --> A11("`Definir metas, estabelecer uma estratégia e desenvolver planos para coordenar atividades.`")
+    A --> A2("`Organizar`") --> A21("`Determinar quais tarefas devem ser realizadas, quem as executa, como as tarefas são agrupadas, quem se reporta a quem e onde são tomadas as decisões.`")
+    A --> A3("`Dirigir`") --> A31("`Motivar os empregados, dirigir outras pessoas, escolher os canais de comunicação mais eficazes e **resolver conflitos**.`")
+    A --> A4("`Controlar`") --> A41("`Supervisionar as atividades para assegurar que sejam cumpridas conforme o planejado e corrigir os desvios importantes.`")
 
     classDef UmngNode fill:#fdc600,stroke:#043074,stroke-width:2px;
     class A,A1,A11,A2,A21,A3,A31,A4,A41 UmngNode;
@@ -96,6 +78,33 @@ flowchart TB
     class A,A1,A11,A2,A21,A3,A31,A4,A41 UmngNode;
 ```
 
+# Modelo Básico do Comportamento Organizacional
+
+##
+
+```{mermaid}
+%%| label: fig-bo-model
+%%| fig-cap: Modelo Básico do Comportamento Organizacional [@robbins_organizational_2024, p. 61]
+%%| fig-height: 5
+flowchart TB
+    subgraph Inputs
+      a1(Individual) 
+      a2(Group) 
+      a3(Organization)
+    end
+
+    subgraph Process
+      b1(Individual) 
+      b2(Group) 
+      b3(Organization)
+    end
+
+    subgraph Outputs
+      c1(Individual) 
+      c2(Group) 
+      c3(Organization)
+    end
+```
 
 
 # Referências {.allowbreaks}
