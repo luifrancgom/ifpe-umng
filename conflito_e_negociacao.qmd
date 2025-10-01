@@ -87,23 +87,38 @@ flowchart TB
 %%| fig-cap: Modelo Básico do Comportamento Organizacional [@robbins_organizational_2024, p. 61]
 %%| fig-height: 5
 flowchart TB
-    subgraph Inputs
-      a1(Individual) 
-      a2(Group) 
-      a3(Organization)
+    subgraph S3["`**Resultados**`"]
+      C1(Individual) 
+      C2("`**Grupal**
+      Desempenho da equipe`") 
+      C3(Organizacional)
+    end
+    
+    subgraph S2["`**Processos**`"]
+      B1(Individual) 
+      B2("`**Grupal**
+      Comunicação
+      Liderança
+      Poder e políticas
+      **Conflito e negociação**`") 
+      B3(Organizacional)
+    end
+    
+    subgraph S1["`**Insumos**`"]
+      A1(Individual) 
+      A2("`**Grupal**
+      Estrutura
+      Papéis
+      Responsabilidade da equipe`") 
+      A3(Organizacional)
     end
 
-    subgraph Process
-      b1(Individual) 
-      b2(Group) 
-      b3(Organization)
-    end
-
-    subgraph Outputs
-      c1(Individual) 
-      c2(Group) 
-      c3(Organization)
-    end
+    classDef UmngNode fill:#fdc600,stroke:#043074,stroke-width:2px;
+    class A1,A2,A3,B1,B2,B3,C1,C2,C3 UmngNode;
+    
+    style S1 fill:#16a085,stroke:#043074,stroke-width:2px
+    style S2 fill:#16a085,stroke:#043074,stroke-width:2px
+    style S3 fill:#16a085,stroke:#043074,stroke-width:2px
 ```
 
 
