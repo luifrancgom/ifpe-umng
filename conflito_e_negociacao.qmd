@@ -121,5 +121,92 @@ flowchart TB
     style S3 fill:#16a085,stroke:#043074,stroke-width:2px
 ```
 
+# Conflito
+
+## {.center}
+
+::: {#def-conflict}
+
+## Conflito
+
+O conflito é uma manifestação entre pelo menos duas partes interdependentes que percebem objetivos incompatíveis e a interferência de outros no alcance de seus objetivos. [@hocker_interpersonal_2018, p. 3]
+
+:::
+
+##
+
+```{mermaid}
+%%| label: fig-conflict-types
+%%| fig-cap: Tipos de conflitos [@robbins_organizational_2024, pp. 479-481]
+%%| fig-height: 5
+
+flowchart LR
+    A("`Tipos`")  --> A1("`Relacionamento`") --> A11("`Relações interpessoais`") ---> A111("`Disfuncional`")
+    A --> A2("`Tarefa`") --> A21("`Conteúdo e objetivos do trabalho`") ---> A211("`**Funcional ou disfuncional?**`")
+    A --> A3("`Processo`")--> A31("`Maneira como o trabalho é realizado`") ---> A311("`Disfuncional`")
+
+    classDef UmngNode fill:#fdc600,stroke:#043074,stroke-width:2px;
+    class A,A1,A11,A111,A2,A21,A211,A3,A31,A311 UmngNode;
+```
+
+##
+
+
+
+# Negociação 
+
+## {.center}
+
+::: {#def-negotiation}
+
+## Negociação
+
+A negociação é um processo de tomada de decisão em que duas ou mais partes conversam entre si em um esforço para resolver seus interesses opostos [@lewicki_negotiation_2024, p. 3].
+
+:::
+
+# Simulação
+
+## {.smaller .center}
+
+- **Instruções da simulação**
+
+    - *Objetivo a negociar*
+
+        - Cada estudante pode escolher entre duas opções para aumentar sua nota final:
+
+            - Opção A: aumentar 0,5 pontos
+            - Opção B: aumentar 1 ponto
+
+        - *Condição*:
+
+          - Se mais de 10% da turma escolher a Opção B, nenhum estudante receberá pontos adicionais.
+          - Se 10% ou menos escolherem a Opção B, cada estudante receberá o aumento correspondente à opção escolhida.
+
+          Portanto, os estudantes devem negociar coletivamente como proceder.
+
+## {.smaller .center}
+
+- *Etapa 1 – Negociação coletiva*
+
+    - A turma terá um tempo limitado para conversar e se coordenar.
+
+    - Podem discutir estratégias, acordos ou compromissos comuns.
+
+- *Etapa 2 – Decisão individual e anônima*
+
+    - Após a negociação, cada estudante escolherá de forma individual e secreta entre a Opção A ou a Opção B.
+
+    - Todas as respostas serão recolhidas de maneira anônima.
+
+    - Uma vez recolhidas, o resultado final será calculado e comunicado a toda a turma.
+    
+## {background-image="000_images/fig-bird-umng-1.jpg"}
+
+::: {.r-fit-text}
+
+Obrigado
+
+:::
 
 # Referências {.allowbreaks}
