@@ -33,6 +33,26 @@ csl: apa.csl
 editor: source
 ---
 
+```{r}
+#| label: palette
+
+umng_palette <- c(
+  "#043074",
+  "#fdc600",
+  "#0d5e30",
+  "#ee2a24",
+  "#fc6700",
+  "#00b3f0",
+  "#6e3c1a",
+  "#f8941c",
+  "#8e44ad",
+  "#2c3e50",
+  "#16a085",
+  "#c0392b",
+  "#e91e63"
+)
+```
+
 # O que fazem os administradores?
 
 ## 
@@ -149,9 +169,65 @@ flowchart LR
     class A,A1,A11,A111,A2,A21,A211,A3,A31,A311 UmngNode;
 ```
 
-##
+## {.smaller .center}
 
+O processo do conflito refere-se à sequência de eventos que ocorre durante um conflito e à maneira pela qual os eventos anteriores influenciam os eventos posteriores e os resultados [@thomas_conflict_1992, p. 656].
 
+```{mermaid}
+%%| label: fig-conflict-process
+%%| fig-cap: O processo do conflito [@robbins_organizational_2024, pp. 482-489]
+%%| fig-height: 4 
+
+flowchart LR
+    subgraph S5["`**Resultados**`"]
+      E1("`Melhora do desempenho do grupo`")
+      E2("`Piora do desempenho do grupo`")
+    end
+
+    subgraph S4["`**Comportamento**`"]
+      D1("`**Conflito explícito**
+      Comportamento das partes
+      Reação dos outros`")
+    end
+
+    subgraph S3["`**Intenções**`"]
+      C1("`**Intenções de gestão de conflitos**
+      Competição
+      Colaboração
+      Compromisso
+      Não enfrentamento
+      Acomodação`")
+    end
+    
+    subgraph S2["`**Cognição e personalização**`"]
+      B1("`Conflito percebido`")
+      B2("`Conflito sentido`")
+    end
+    
+    subgraph S1["`**Oposição potencial**`"]
+      A1("`**Condições antecedentes**
+      Comunicação
+      Estrutura
+      Variáveis pessoais`")
+    end
+    
+    A1 --> B1
+    A1 --> B2
+    B1 --> C1
+    B2 --> C1
+    C1 --> D1
+    D1 --> E1
+    D1 --> E2
+
+    classDef UmngNode fill:#fdc600,stroke:#043074,stroke-width:2px;
+    class A1,B1,B2,C1,D1,E1,E2 UmngNode;
+
+    style S1 fill:#16a085,stroke:#043074,stroke-width:2px
+    style S2 fill:#8e44ad,stroke:#043074,stroke-width:2px
+    style S3 fill:#ee2a24,stroke:#043074,stroke-width:2px
+    style S4 fill:#fc6700,stroke:#043074,stroke-width:2px
+      style S5 fill:#16a085,stroke:#043074,stroke-width:2px
+```
 
 # Negociação 
 
