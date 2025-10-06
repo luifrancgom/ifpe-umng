@@ -34,6 +34,13 @@ editor: source
 ---
 
 ```{r}
+#| label: libraries
+
+library(tidyverse)
+library(gt)
+```
+
+```{r}
 #| label: palette
 
 umng_palette <- c(
@@ -176,7 +183,7 @@ O processo do conflito refere-se à sequência de eventos que ocorre durante um 
 ```{mermaid}
 %%| label: fig-conflict-process
 %%| fig-cap: O processo do conflito [@robbins_organizational_2024, pp. 482-489]
-%%| fig-height: 4 
+%%| fig-height: 4.5
 
 flowchart LR
     subgraph S5["`**Resultados**`"]
@@ -195,11 +202,11 @@ flowchart LR
       Competição
       Colaboração
       Compromisso
-      Não enfrentamento
+      Evitamento
       Acomodação`")
     end
     
-    subgraph S2["`**Cognição e personalização**`"]
+    subgraph S2["`**Cognição/Personalização**`"]
       B1("`Conflito percebido`")
       B2("`Conflito sentido`")
     end
@@ -229,6 +236,52 @@ flowchart LR
       style S5 fill:#16a085,stroke:#043074,stroke-width:2px
 ```
 
+##
+
+```{r}
+#| label: fig-dual-conflict-handling-intentions
+#| fig-cap: Intenções de gestão do conflito [@robbins_organizational_2024, p. 486]
+
+dual_concern_model <- tibble(x = c(1, 1, 3, 5, 5),
+                             y = c(1, 5, 3, 1, 5),
+                             labels = c("Evitamento",
+                                        "Competição",
+                                        "Compromisso",
+                                        "Acomodação",
+                                        "Colaboração"))
+
+dual_concern_model |> 
+  ggplot() + 
+  geom_label(aes(x = x, y = y, label = labels),
+             size = 5,
+             fill = "#fdc600") +
+  geom_segment(data = tibble(x = 0,
+                             y = 0,
+                             yend = 0, xend = 6),
+               aes(x = x, y = y,
+                   xend = xend, yend = yend),
+               color = "#043074", 
+               arrow = arrow(length = unit(0.25, "inches"))) +
+  geom_segment(data = tibble(x = 0,
+                             y = 0,
+                             yend = 6, xend = 0),
+               aes(x = 0, y = 0,
+                   yend = 6, xend = 0),
+               color = "#043074", 
+               arrow = arrow(length = unit(0.25, "inches"))) +
+  scale_x_continuous(limits = c(0, 6)) +
+  labs(x = "Cooperação",
+       y = "Assertividade") +
+  theme(panel.border      = element_rect(fill = NA, 
+                                         color = "black"),
+        plot.background   = element_rect(fill = "white"),
+        panel.background  = element_rect(fill = "white"),
+        legend.background = element_rect(fill = "white"),
+        legend.position   = "bottom", 
+        axis.text         = element_blank(),
+        axis.ticks        = element_blank())
+```
+
 # Negociação 
 
 ## {.center}
@@ -240,6 +293,74 @@ flowchart LR
 A negociação é um processo de tomada de decisão em que duas ou mais partes conversam entre si em um esforço para resolver seus interesses opostos [@lewicki_negotiation_2024, p. 3].
 
 :::
+
+## {.center}
+
+```{r}
+#| label: tbl-negotiation-estrategies
+#| tbl-cap: Estratégias de negociação [@robbins_organizational_2024, p. 491]
+
+# Data
+data <- tibble(
+  characteristics = c("Objetivo",
+                      "Motivação",
+                      "Enfoque",
+                      "Compartilhar informações",
+                      "Relação"),
+  distributive    = c("Reivindicar valor",
+                      "Ganha–Perde",
+                      "Posturas",
+                      "Baixa",
+                      "De curto prazo"),
+  integrative     = c("Criar valor",
+                      "Ganha–Ganha",
+                      "Interesses",
+                      "Alta",
+                      "De longo prazo")     
+)
+
+# Table
+table <- data |> 
+  gt() |> 
+  cols_label(
+    characteristics = "Características",
+    distributive    = "Distributiva",
+    integrative     = "Integrativa" 
+  ) |> 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_options(
+    row.striping.include_table_body = TRUE,
+    table.border.top.width = px(3),
+    table.border.top.color = "black",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    table.border.bottom.width = px(3),
+    table.border.bottom.color = "black",
+    table.font.size = px(24)
+  )
+
+table
+```
+
+## {.center}
+
+```{mermaid}
+%%| label: fig-negotiation-process
+%%| fig-cap: O processo de negociação [@robbins_organizational_2024, pp. 495-497]
+%%| fig-height: 1.5
+
+flowchart LR
+    A1("`Preparação e planejamento`") --> A2("`Definição das regras básicas`")
+    A2 --> A3("`Esclarecimentos e justificativas`")
+    A3 --> A4("`Barganha e solução de problemas`")
+    A4 --> A5("`Conclução e implementação`")
+
+    classDef UmngNode fill:#fdc600,stroke:#043074,stroke-width:2px;
+    class A1,A2,A3,A4,A5 UmngNode;
+```
 
 # Simulação
 
