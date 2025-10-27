@@ -339,11 +339,70 @@ table <- data |>
     column_labels.border.bottom.color = "black",
     table.border.bottom.width = px(3),
     table.border.bottom.color = "black",
-    table.font.size = px(24)
+    table.font.size = px(30)
   )
 
 table
 ```
+
+## {.center}
+
+```{r}
+#| label: tbl-negotiation-estrategies-integration
+#| tbl-cap: Integração de estratégias distributivas e integrativas [@robbins_organizational_2024, p. 460]
+
+# Data english
+# dist_int_est_en <- tribble(
+#   ~Stage,                     ~`Strategy Type`, ~`Core Action`,                                      ~Goal,
+#   "Clarify needs",            "Integrative",    "Understand both parties’ needs",                   "Build trust and information",
+#   "Articulate interests",     "Integrative",    "Make interests clear",                             "Identify potential for joint gains",
+#   "Avoid early compromise",   "Integrative",    "Delay concessions",                                "Keep creative space open",
+#   "Set high goals",           "Distributive",   "Establish ambitious targets",                      "Claim value wisely",
+#   "Slice the pie",            "Distributive",   "Manage concessions so they become progressively smaller", "Finalize value distribution"
+# )
+
+# Data 
+dist_int_est_pt <- tribble(
+  ~stage,                      ~`strategy_type`, ~`core_action`,                                    ~goal,
+  "Esclarecer necessidades",   "Integrativa",    "Compreender as necessidades de ambas as partes",  "Construir confiança e base de informação",
+  "Articular interesses",      "Integrativa",    "Tornar claros os interesses",                     "Identificar potencial de ganhos mútuos",
+  "Evitar concessões precoces","Integrativa",    "Adiar concessões",                                "Manter espaço para soluções criativas",
+  "Definir metas elevadas",    "Distributiva",   "Estabelecer metas ambiciosas",                    "Capturar valor de forma prudente",
+  "Dividir o “bolo”",          "Distributiva",   "Gerir concessões de forma progressivamente menor","Finalizar a distribuição do valor"
+)
+
+# Table
+table_dist_int_est_pt <-  dist_int_est_pt |> 
+  gt() |>
+  cols_label(
+    stage = "Etapa",
+    strategy_type = "Tipo de estratégia",
+    core_action = "Ação central",
+    goal = "Objetivo" 
+  ) |>  
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_options(
+    row.striping.include_table_body = TRUE,
+    table.border.top.width = px(3),
+    table.border.top.color = "black",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    table.border.bottom.width = px(3),
+    table.border.bottom.color = "black",
+    table.font.size = px(24)
+  )
+
+table_dist_int_est_pt
+```
+
+## {.center}
+
+| A parte distributiva não contradiz a integrativa, ela a complementa. Você pode pensar da seguinte forma:
+
+> *Colabore no início para expandir o bolo, depois compita de forma inteligente para dividi-lo.*
 
 ## {.center}
 
@@ -362,11 +421,11 @@ flowchart LR
     class A1,A2,A3,A4,A5 UmngNode;
 ```
 
-# Simulação
+# Simulação 
 
 ## {.smaller .center}
 
-- **Instruções da simulação**
+- **Instruções da simulação**[^1]
 
     - *Objetivo a negociar*
 
@@ -382,6 +441,8 @@ flowchart LR
 
           Portanto, os estudantes devem negociar coletivamente como proceder.
 
+[^1]: Esta simulação é baseada em [@selterman_altruistic_2019]
+
 ## {.smaller .center}
 
 - *Etapa 1 – Negociação coletiva*
@@ -394,7 +455,11 @@ flowchart LR
 
     - Após a negociação, cada estudante escolherá de forma individual e secreta entre a Opção A ou a Opção B.
 
-    - Todas as respostas serão recolhidas de maneira anônima.
+    - Todas as respostas serão recolhidas de maneira anônima, acessando o seguinte link
+
+      <div style="text-align: center;">
+        <a href="https://forms.gle/y9to4hmik2VWbiVr5" target="_blank">Clique aqui para acessar o formulário</a>
+      </div>
 
     - Uma vez recolhidas, o resultado final será calculado e comunicado a toda a turma.
     
